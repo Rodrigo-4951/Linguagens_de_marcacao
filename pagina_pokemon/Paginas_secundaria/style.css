@@ -1,0 +1,117 @@
+@media (max-width: 1000px) {
+    div#sumario {
+        grid-template-areas: "cabecalho";
+        grid-template-columns: 1fr;
+    }
+
+    #menu {
+        display: none;
+    }
+    
+    div#container {
+        max-width: 80%;
+    }
+
+    div.Geracao {
+        background-image: linear-gradient(0deg, #dddddd 49.5%, #929292 49.5%, #929292 50.5%, #ffa3a3 50.5%);
+    }
+}
+
+@media (min-width: 1001px) {
+    div.Geracao div.Texto {
+        grid-area: Texto;
+    }
+
+    div.Geracao div.Imagem {
+        grid-area: Imagens;
+    }
+
+    div.Texto p {
+        font-size: 1vw;
+    }
+
+    div.Geracao:nth-child(4n) {
+        display: grid;
+        gap: 5px;
+        grid-template-areas: "Imagens Texto";
+        background-image: linear-gradient(0deg, #dddddd 49.5%, #929292 49.5%, #929292 50.5%, #ffa3a3 50.5%);
+        grid-template-columns: 1fr 1fr;
+    }
+
+    div.Geracao:nth-child(4n-2) {
+        display: grid;
+        gap: 5px;
+        grid-template-areas: "Texto Imagens";
+        grid-template-columns: 1fr 1fr;
+        background-image: linear-gradient(0deg, #dddddd 49.5%, #929292 49.5%, #929292 50.5%, #ffa3a3 50.5%);
+        border-radius: 50px;
+    }
+
+    div#container h1 {
+        font-size: 50px;
+    }
+}
+
+div#barra-inicial h1 {
+    letter-spacing: 3px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* div#container > * {
+    border: 1px solid black; 
+}   */
+
+div#container h1 {
+    text-align: center;
+}
+
+div#container p {
+    text-indent: 20px;
+}
+
+div.Imagem img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid black ;
+}
+
+div.Geracao > * {
+    padding: 10px;
+}
+
+#conteudo > * > * {
+    animation-name: scroller, scroller2;
+    animation-timing-function: linear, linear;
+    animation-timeline: view(block 1vh 110vh), view(block 110vh 1vh);
+    z-index: 1;
+}
+
+@keyframes scroller {
+    from {
+        filter: blur(0px);
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        filter: blur(3px);
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+@keyframes scroller2 {
+    from {
+        filter: blur(3px);
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        filter: blur(0px);
+        opacity: 1;
+        transform: scale(1);
+    }
+}

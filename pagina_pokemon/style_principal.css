@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    background-color: rgb(203, 230, 255);
+    background-image: url(src/pikachu.png);
+    background-size: 40px 40px;
+    background-repeat: space;
+}
+
+div#container {
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid rgb(203, 230, 255);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "conteudo" 
+    "rodape";
+    gap : 5px;
+    margin: 100px auto 0 auto;
+    padding: 10px 10px 10px 10px;
+}
+
+div#sumario {
+    display: grid;
+    /* border: 1px solid black; */
+    background-color: rgb(3, 0, 39);
+    gap : 5px;
+}
+
+@media (max-width: 800px) {
+    div#sumario {
+        grid-template-areas: "cabecalho";
+        grid-template-columns: 1fr;
+    }
+
+    #menu {
+        display: none;
+    }
+    
+    div#container {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 801px) {
+    div#sumario {
+        grid-template-areas: "cabecalho menu";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #menu {
+        display: grid;
+    }
+
+    div#container {
+        max-width: 90%;
+    }
+}
+
+div#barra-final {
+    position: relative;
+    /* border: 1px solid black; */
+    background-color: rgb(3, 0, 39);
+    bottom: 0px;
+    width: 100%;
+    padding: 0px;
+}
+
+div#barra-final p, div#barra-final footer{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+div#barra-inicial {
+    position: fixed;
+    width: 100vw;
+    height: 20px;
+    top: 0px;
+    z-index: 1000;
+}
+
+div#barra-inicial .links, div#barra-inicial .link-principal{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+div#barra-inicial .links:hover, div#barra-inicial .link-principal:hover {
+    text-decoration: underline;
+}
+
+div#barra-inicial .links::selection, .link-principal::selection {
+    color: #c082b8;
+}
+
+div.centralizar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#barra-inicial div.centralizar {
+    flex-direction: row;
+    min-height: 10vh;
+}
+
+#barra-final div.centralizar {
+    flex-direction: column;
+}
+
+div.centralizar > div:not(div a.link-principal) {
+    padding: 5px;
+}
+
+div.topico {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+
+div#barra-inicial h1 {
+    letter-spacing: 3px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+/* div#container > * {
+    border: 1px solid black; 
+}   */
+
+#cabecalho {
+    grid-area: cabecalho;
+}
+
+div#container {
+    display: block;
+    min-height: 98vh;
+}

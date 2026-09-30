@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "Perpetua";
+    src: url("perpetua.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+}
+
+body {
+    font-family: "Perpetua", serif;
+    font-size: larger;
+    margin: 0;
+    background-color:#4d6f94;
+    color: #CDC686;
+}
+
+header {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    background-color:#1d2e65;
+    color: white;
+    padding: 18px;
+    text-align: center;
+}
+
+section {
+    background-color: #330055;
+    margin: 18px;
+    padding: 18px;
+    border: 2px solid #B71C1C;
+    border-radius: 6px;
+}
+
+h1 {
+    color: #F5F5F5;
+    font-size: 36px;
+}
+
+h2 {
+    color: #F5F5F5;
+    font-size: 28px;
+}
+
+ul {
+    padding-left: 18px;
+}
+
+li {
+    margin-bottom: 12px;
+}
+
+a {
+    color: #b9f111 ;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+a:hover {
+    color: #ff6600;
+}
+
+footer {
+    background-color:#1d2e65 ;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 18px;
+    margin-top: 20px;
+}
